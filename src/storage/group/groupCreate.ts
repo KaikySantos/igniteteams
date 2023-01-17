@@ -8,9 +8,9 @@ export async function groupCreate(newGroupName: string) {
   try {
     const storagedGroups = await groupsGetAll()
     
-    const storage = JSON.stringify([...storagedGroups, newGroupName])
+    const storage = JSON.stringify([...storagedGroups, newGroupName]);
 
-    await AsyncStorage.setItem(GROUP_COLLECTION, storage)
+    await AsyncStorage.setItem(GROUP_COLLECTION, storage);
   } catch (error) {
     throw error;
   }
